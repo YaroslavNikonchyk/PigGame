@@ -114,6 +114,11 @@ button:hover {
 
 .instruction {
     display: none;
+    padding: 2.4rem 1.2rem;
+}
+
+.instruction h2 {
+    font-size: 3.6rem;
 }
 
 .hidden {

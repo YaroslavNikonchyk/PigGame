@@ -26,6 +26,8 @@ button1.addEventListener("click", function () {
     diceArray.forEach(dice => dice.style.display = "none")
     player2.classList.remove("active-player");
     player1.classList.add("active-player");
+    tableScoreFirstPlayer.textContent = "0";
+    tableScoreSecondPlayer.textContent = "0";
 })
 
 let score = 0;
@@ -62,14 +64,19 @@ button3.addEventListener("click", function () {
     if (player1.classList.contains("active-player")) {
         tableScoreFirstPlayer.textContent =
             Number(tableScoreFirstPlayer.textContent) + score;
+        firstPlayerScore.textContent = "0";
         player1.classList.remove("active-player");
         player2.classList.add("active-player");
+        diceArray.forEach(dice => dice.style.display = "none");
     } else if (player2.classList.contains("active-player")) {
         tableScoreSecondPlayer.textContent =
             Number(tableScoreSecondPlayer.textContent) + score;
+        secondPlayerScore.textContent = "0";
         player2.classList.remove("active-player");
         player1.classList.add("active-player");
+        diceArray.forEach(dice => dice.style.display = "none");
     }
+    score = 0
 })
 button4.addEventListener("click", function () {
     instruction.classList.add("hidden");
