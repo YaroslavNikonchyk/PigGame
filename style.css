@@ -19,12 +19,13 @@ section {
     margin: 12rem auto;
     background: linear-gradient(to bottom right, #ffdeeb, #faa2c1);
     box-shadow: 0 0 50px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 6px;
+    border-radius: 9px;
 }
 
 .game-display {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    position: relative;
 }
 
 .player-container {
@@ -33,6 +34,13 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.active-player {
+    background-color: rgba(194, 37, 92, 0.3);
+    width: 100%;
+    border-radius: inherit;
+
 }
 
 section h2 {
@@ -48,8 +56,53 @@ section h2 {
 }
 
 .score-table {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
     margin-top: auto;
     background-color: #c2255c;
-    padding: 2.4rem 4.4rem;
+    color: #fff;
+    padding: 2.4rem 5.6rem;
     border-radius: 12px;
+}
+
+.current {
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: lighter;
+}
+
+.table-score {
+    align-self: center;
+    font-size: 3.6rem;
+}
+
+
+button {
+    text-transform: uppercase;
+    background-color: rgba(238, 238, 238, 0.8);
+    padding: 1.2rem 2.4rem;
+    font-weight: bold;
+    border-radius: 21px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+}
+
+button:hover {
+    background-color: rgba(225, 225, 225, 0.8);
+}
+
+
+.button-1 {
+    top: 10%;
+}
+
+.button-2 {
+    top: 65%;
+}
+
+.button-3 {
+    top: 75%;
 }
