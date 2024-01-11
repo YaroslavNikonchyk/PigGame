@@ -72,7 +72,7 @@ section h2 {
     font-weight: lighter;
 }
 
-.table-score {
+.table-score-first-player, .table-score-second-player {
     align-self: center;
     font-size: 3.6rem;
 }

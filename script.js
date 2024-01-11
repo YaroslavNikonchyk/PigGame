@@ -4,6 +4,7 @@ let button2 = document.querySelector(".button-2");
 let button3 = document.querySelector(".button-3");
 let button4 = document.querySelector(".button-4");
 let body = document.querySelector("body");
+let main = document.querySelector("main");
 let activePlayer = document.querySelector(".active-player");
 let player1 = document.querySelector(".player-1");
 let player2 = document.querySelector(".player-2");
@@ -16,13 +17,17 @@ let dice4 = document.querySelector(".dice-4")
 let dice5 = document.querySelector(".dice-5")
 let dice6 = document.querySelector(".dice-6")
 let diceArray = [dice1, dice2, dice3, dice4, dice5, dice6];
-button4.addEventListener("click", function () {
-    instruction.classList.add("hidden");
+let tableScoreFirstPlayer = document.querySelector(".table-score-first-player")
+let tableScoreSecondPlayer = document.querySelector(".table-score-second-player")
+
+button1.addEventListener("click", function () {
+    firstPlayerScore.textContent = "0";
+    secondPlayerScore.textContent = "0";
+    diceArray.forEach(dice => dice.style.display = "none")
+    player2.classList.remove("active-player");
+    player1.classList.add("active-player");
 })
-button4.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && instruction.classList.contains("hidden"))
-        instruction.classList.remove("hidden");
-})
+
 let score = 0;
 player1.classList.add("active-player");
 button2.addEventListener("click", function () {
@@ -52,4 +57,24 @@ button2.addEventListener("click", function () {
             player2.classList.remove("active-player");
         }
     }
+})
+button3.addEventListener("click", function () {
+    if (player1.classList.contains("active-player")) {
+        tableScoreFirstPlayer.textContent =
+            Number(tableScoreFirstPlayer.textContent) + score;
+        player1.classList.remove("active-player");
+        player2.classList.add("active-player");
+    } else if (player2.classList.contains("active-player")) {
+        tableScoreSecondPlayer.textContent =
+            Number(tableScoreSecondPlayer.textContent) + score;
+        player2.classList.remove("active-player");
+        player1.classList.add("active-player");
+    }
+})
+button4.addEventListener("click", function () {
+    instruction.classList.add("hidden");
+})
+button4.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && instruction.classList.contains("hidden"))
+        instruction.classList.remove("hidden");
 })
