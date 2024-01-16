@@ -28,7 +28,8 @@ button1Click = function () {
     player1.classList.add("active-player");
     tableScoreFirstPlayer.textContent = "0";
     tableScoreSecondPlayer.textContent = "0";
-    congratulations.style.display = "none";
+    congratulations.style.opacity = "0";
+    congratulations.style.visibility = "hidden";
     gameDisplay.style.display = "grid";
 }
 button1.addEventListener("click", button1Click)
@@ -107,12 +108,14 @@ button3.addEventListener("click", function () {
     if (Number(tableScoreFirstPlayer.textContent) >= 100) {
         gameDisplay.style.display = "none";
         congratulations.querySelector("p").textContent = "Player 1 WIN!!!";
-        congratulations.style.display = "grid";
+        congratulations.style.opacity = "1";
+        congratulations.style.visibility = "visible";
     }
     if (Number(tableScoreSecondPlayer.textContent) >= 100) {
         gameDisplay.style.display = "none";
         congratulations.querySelector("p").textContent = "Player 2 WIN!!!";
-        congratulations.style.display = "grid";
+        congratulations.style.opacity = "1";
+        congratulations.style.visibility = "visible";
     }
 })
 

@@ -179,7 +179,10 @@ img {
 }
 
 .congratulations {
-    display: none;
+    display: grid;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.2s ease-in-out;
     background-color: #37b24d;
     color: #ebfbee;
     font-size: 8.6rem;
@@ -288,7 +291,7 @@ img {
         transform: translateX(0%);
         padding: 6.2rem 24rem;
     }
-    
+
     html {
         font-size: 17.5%;
     }
