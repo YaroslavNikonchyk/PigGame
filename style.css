@@ -114,11 +114,32 @@ button:hover {
 
 .instruction {
     display: none;
-    padding: 2.4rem 1.2rem;
+    padding: 3.6rem 4.4rem;
 }
 
 .instruction h2 {
     font-size: 3.6rem;
+    margin-bottom: 3.6rem;
+    text-align: center;
+}
+
+.instruction-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.instruction-list li {
+    font-size: 2.4rem;
+}
+
+.back-to-game-button {
+    width: 30rem;
+    justify-self: end;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    margin-top: 28%;
+    padding: 2rem 1rem;
 }
 
 .hidden {

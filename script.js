@@ -85,3 +85,9 @@ button4.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && instruction.classList.contains("hidden"))
         instruction.classList.remove("hidden");
 })
+
+body.addEventListener("click", function (e) {
+    if (!button4.contains(e.target)) {
+        instruction.classList.remove("hidden");
+    }
+});
