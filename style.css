@@ -117,11 +117,6 @@ button:hover {
     top: -15%;
 }
 
-.instruction {
-    display: none;
-    padding: 3.6rem 4.4rem;
-}
-
 .instruction h2 {
     font-size: 3.6rem;
     margin-bottom: 3.6rem;
@@ -147,8 +142,11 @@ button:hover {
     padding: 2rem 1rem;
 }
 
-.hidden {
-    display: block;
+.instruction {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.2s ease-in-out;
+    padding: 3.6rem 4.4rem;
     position: absolute;
     width: 70rem;
     height: 70rem;
@@ -266,6 +264,10 @@ img {
         margin-top: 30rem;
     }
 
+    .back-to-game-button {
+        margin-top: 15rem;
+    }
+
     html {
         font-size: 29.5%;
     }
@@ -274,6 +276,23 @@ img {
 @media (max-width: 426px) {
     img {
         width: 20rem;
+    }
+
+    .instruction {
+        padding: 5.6rem 8rem;
+        width: 115rem;
+        height: 115rem;
+    }
+
+    .instruction h2 {
+        font-size: 5.6rem;
+        margin-bottom: 5rem;
+    }
+
+    .instruction button {
+        margin-top: 19rem;
+        width: 50rem;
+        height: 10rem;
     }
 
     .game-display {

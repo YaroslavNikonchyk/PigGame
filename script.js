@@ -86,22 +86,27 @@ button3.addEventListener("click", function () {
     score = 0
 })
 button4.addEventListener("click", function () {
-    instruction.classList.add("hidden");
+    instruction.style.visibility = "visible";
+    instruction.style.opacity = "1";
 })
 document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && instruction.classList.contains("hidden"))
-        instruction.classList.remove("hidden");
+    if (e.key === "Escape" && instruction.style.visibility === "visible") {
+        instruction.style.visibility = "hidden";
+        instruction.style.opacity = "0";
+    }
 })
 
 document.addEventListener("click", function (e) {
     if (!button4.contains(e.target) &&
         !instruction.contains(e.target)) {
-        instruction.classList.remove("hidden");
+        instruction.style.visibility = "hidden";
+        instruction.style.opacity = "0";
     }
 });
 
 backToGameButton.addEventListener("click", function () {
-    instruction.classList.remove("hidden");
+    instruction.style.visibility = "hidden";
+    instruction.style.opacity = "0";
 })
 
 button3.addEventListener("click", function () {
