@@ -3,9 +3,6 @@ let button1 = document.querySelector(".button-1");
 let button2 = document.querySelector(".button-2");
 let button3 = document.querySelector(".button-3");
 let button4 = document.querySelector(".button-4");
-let body = document.querySelector("body");
-let main = document.querySelector("main");
-let activePlayer = document.querySelector(".active-player");
 let player1 = document.querySelector(".player-1");
 let player2 = document.querySelector(".player-2");
 let firstPlayerScore = document.querySelector(".first-player-score");
@@ -20,6 +17,8 @@ let diceArray = [dice1, dice2, dice3, dice4, dice5, dice6];
 let tableScoreFirstPlayer = document.querySelector(".table-score-first-player")
 let tableScoreSecondPlayer = document.querySelector(".table-score-second-player")
 let backToGameButton = document.querySelector(".back-to-game-button");
+let gameDisplay = document.querySelector(".game-display")
+let congratulations = document.querySelector(".congratulations")
 
 button1.addEventListener("click", function () {
     firstPlayerScore.textContent = "0";
@@ -30,6 +29,12 @@ button1.addEventListener("click", function () {
     tableScoreFirstPlayer.textContent = "0";
     tableScoreSecondPlayer.textContent = "0";
 })
+
+congratulations.querySelector("button")
+    .addEventListener("click", function () {
+        congratulations.style.display = "none";
+        gameDisplay.style.display = "grid";
+    })
 
 let score = 0;
 player1.classList.add("active-player");
@@ -97,3 +102,18 @@ document.addEventListener("click", function (e) {
 backToGameButton.addEventListener("click", function () {
     instruction.classList.remove("hidden");
 })
+
+button3.addEventListener("click", function () {
+    if (Number(tableScoreFirstPlayer.textContent) >= 100) {
+        gameDisplay.style.display = "none";
+        congratulations.querySelector("p").textContent = "Player 1 WIN!!!";
+        congratulations.style.display = "grid";
+    }
+    if (Number(tableScoreSecondPlayer.textContent) >= 100) {
+        gameDisplay.style.display = "none";
+        congratulations.querySelector("p").textContent = "Player 2 WIN!!!";
+        congratulations.style.display = "grid";
+    }
+})
+
+
