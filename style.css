@@ -45,7 +45,6 @@ section {
 .active-player {
     background-color: rgba(132, 94, 247, 0.3);
     width: 100%;
-    border-radius: inherit;
     transition: all 0.3s;
 }
 
@@ -167,6 +166,8 @@ img {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     top: 50%;
+    border-radius: 9px;
+    transition: all 0.9s ease-in-out;
 }
 
 .images {
@@ -277,6 +278,17 @@ img {
         height: 55vh;
     }
 
+    .congratulations {
+        font-size: 12rem;
+    }
+
+    .congratulations button {
+        margin-top: -6rem;
+        font-size: 6.4rem;
+        transform: translateX(0%);
+        padding: 6.2rem 24rem;
+    }
+    
     html {
         font-size: 17.5%;
     }

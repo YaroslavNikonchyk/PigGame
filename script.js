@@ -20,7 +20,7 @@ let backToGameButton = document.querySelector(".back-to-game-button");
 let gameDisplay = document.querySelector(".game-display")
 let congratulations = document.querySelector(".congratulations")
 
-button1.addEventListener("click", function () {
+button1Click = function () {
     firstPlayerScore.textContent = "0";
     secondPlayerScore.textContent = "0";
     diceArray.forEach(dice => dice.style.display = "none")
@@ -28,13 +28,13 @@ button1.addEventListener("click", function () {
     player1.classList.add("active-player");
     tableScoreFirstPlayer.textContent = "0";
     tableScoreSecondPlayer.textContent = "0";
-})
+    congratulations.style.display = "none";
+    gameDisplay.style.display = "grid";
+}
+button1.addEventListener("click", button1Click)
 
 congratulations.querySelector("button")
-    .addEventListener("click", function () {
-        congratulations.style.display = "none";
-        gameDisplay.style.display = "grid";
-    })
+    .addEventListener("click", button1Click)
 
 let score = 0;
 player1.classList.add("active-player");
