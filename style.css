@@ -199,13 +199,13 @@ img {
     color: #2b8a3e;
 }
 
-@media (max-width: 1092px) {
+@media screen and (max-width: 1092px) {
     html {
         font-size: 71.5%;
     }
 }
 
-@media (max-width: 953px) {
+@media screen and (max-width: 953px) {
     .game-display {
         margin-top: 25rem;
     }
@@ -215,7 +215,7 @@ img {
     }
 }
 
-@media (max-width: 869px) {
+@media screen and (max-width: 869px) {
     .game-display {
         height: 70vh;
     }
@@ -225,7 +225,7 @@ img {
     }
 }
 
-@media (max-width: 737px) {
+@media screen and (max-width: 737px) {
     .game-display {
         height: 67vh;
     }
@@ -235,7 +235,11 @@ img {
     }
 }
 
-@media (max-width: 605px) {
+@media screen and (max-width: 605px) {
+    .instruction {
+        padding: 4.4rem 5.6rem;
+    }
+
     .button-1 {
         top: 15%;
     }
@@ -254,7 +258,11 @@ img {
     }
 }
 
-@media (max-width: 487px) {
+@media screen and (max-width: 487px) {
+    .instruction button {
+        margin-top: 7rem;
+    }
+
     img {
         width: 15rem;
     }
@@ -273,15 +281,16 @@ img {
     }
 }
 
-@media (max-width: 426px) {
+
+@media screen and (max-width: 426px) {
     img {
         width: 20rem;
     }
 
     .instruction {
-        padding: 5.6rem 8rem;
-        width: 115rem;
-        height: 115rem;
+        padding: 5.6rem 4.4rem;
+        width: 90rem;
+        height: 90rem;
     }
 
     .instruction h2 {
@@ -290,7 +299,8 @@ img {
     }
 
     .instruction button {
-        margin-top: 19rem;
+        font-size: 4.4rem;
+        margin-top: 32rem;
         width: 50rem;
         height: 10rem;
     }
