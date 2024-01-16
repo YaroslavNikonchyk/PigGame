@@ -11,10 +11,11 @@ html {
 body {
     background: linear-gradient(to bottom right, #6741d9, #5f3dc4);
     font-family: sans-serif;
+    height: 100vh;
 }
 
 section {
-    width: 90rem;
+    max-width: 90rem;
     height: 60rem;
     margin: 12.95rem auto;
     background: linear-gradient(to bottom right, #e5dbff, #d0bfff);
@@ -26,6 +27,10 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: relative;
+}
+
+.game-display-padding {
+    padding: 0 2.4rem;
 }
 
 .player-container {
@@ -169,4 +174,88 @@ img {
 
 .dice-img {
     display: none;
+}
+
+@media (max-width: 1092px) {
+    html {
+        font-size: 71.5%;
+    }
+}
+
+@media (max-width: 953px) {
+    .game-display {
+        margin-top: 25rem;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+}
+
+@media (max-width: 869px) {
+    .game-display {
+        height: 70vh;
+    }
+
+    html {
+        font-size: 53.5%;
+    }
+}
+
+@media (max-width: 737px) {
+    .game-display {
+        height: 67vh;
+    }
+
+    html {
+        font-size: 43.5%;
+    }
+}
+
+@media (max-width: 605px) {
+    .button-1 {
+        top: 15%;
+    }
+
+    .button-4 {
+        top: -10%;
+    }
+
+    .game-display {
+        height: 66vh;
+    }
+
+    html {
+        font-size: 35.5%;
+    }
+}
+
+@media (max-width: 487px) {
+    img {
+        width: 15rem;
+    }
+
+    .game-display {
+        height: 60vh;
+        margin-top: 30rem;
+    }
+
+    html {
+        font-size: 29.5%;
+    }
+}
+
+@media (max-width: 426px) {
+    img {
+        width: 20rem;
+    }
+
+    .game-display {
+        margin-top: 50rem;
+        height: 55vh;
+    }
+
+    html {
+        font-size: 17.5%;
+    }
 }

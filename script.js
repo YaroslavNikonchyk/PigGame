@@ -19,6 +19,7 @@ let dice6 = document.querySelector(".dice-6")
 let diceArray = [dice1, dice2, dice3, dice4, dice5, dice6];
 let tableScoreFirstPlayer = document.querySelector(".table-score-first-player")
 let tableScoreSecondPlayer = document.querySelector(".table-score-second-player")
+let backToGameButton = document.querySelector(".back-to-game-button");
 
 button1.addEventListener("click", function () {
     firstPlayerScore.textContent = "0";
@@ -81,13 +82,18 @@ button3.addEventListener("click", function () {
 button4.addEventListener("click", function () {
     instruction.classList.add("hidden");
 })
-button4.addEventListener("keydown", function (e) {
+document.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && instruction.classList.contains("hidden"))
         instruction.classList.remove("hidden");
 })
 
-body.addEventListener("click", function (e) {
-    if (!button4.contains(e.target)) {
+document.addEventListener("click", function (e) {
+    if (!button4.contains(e.target) &&
+        !instruction.contains(e.target)) {
         instruction.classList.remove("hidden");
     }
 });
+
+backToGameButton.addEventListener("click", function () {
+    instruction.classList.remove("hidden");
+})
